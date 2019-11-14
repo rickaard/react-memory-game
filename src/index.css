@@ -61,3 +61,13 @@
   transform: rotateY(180deg);
 }
 
+@media screen and (max-width: 600px) {
+  .memory-game {
+    width: 400px;
+    height: 400px;
+    align-content: center;
+  }
+  .flip-class {
+    width: calc(33% - 10px);
+  }
+}
