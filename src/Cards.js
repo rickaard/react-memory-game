@@ -2,10 +2,16 @@ import React from 'react'
 
 export const CardList = ({flippedProps, ...props}) => {
 
+    const borderStyling = {
+        animationName: 'slideBorder',
+        animationDuration: '.5s',
+        animationIterationCount: '1',
+        animationTimingFunction: 'ease-out'
+    }
 
     return (
         <div {...flippedProps} className="flip-class">
-        <div  className={`memory-card ${props.flipState ? 'flip' : ''}`} onClick={() => props.handleClick(props.itemIndex, props.cardItem)} style={{opacity: props.completeCards.includes(props.itemIndex)?'.3':'1'}}>
+        <div  className={`memory-card ${props.flipState ? 'flip' : ''}`} onClick={() => props.handleClick(props.itemIndex, props.cardItem)} style={props.completeCards.includes(props.itemIndex)?borderStyling:null}>
             <img
                 className="front-face" 
                 src={require(`./assets/${props.cardItem}.svg`)}

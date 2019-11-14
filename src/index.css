@@ -61,6 +61,17 @@
   transform: rotateY(180deg);
 }
 
+@keyframes slideBorder {
+  from {
+    outline:solid 0 gold;
+  }
+  to {
+    outline:solid 5px gold;
+
+  }
+}
+
+
 @media screen and (max-width: 600px) {
   .memory-game {
     width: 400px;
