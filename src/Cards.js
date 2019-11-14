@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react'
 
+export const CardList = ({flippedProps, ...props}) => {
 
-
-const Cards = ({cards, setCards}) => {
-    const [flip, setFlip] = useState(true);
-
-    const handleClick = (cards) => {
-        // console.log('klick från cards.js')
-        setFlip(true);
-        setCards(cards);
-    }
 
     return (
-        <div className={`memory-card ${flip ? 'flip' : ''}`} onClick={() => handleClick(cards)}>
+        <div {...flippedProps} className="flip-class">
+        <div  className={`memory-card ${props.flipState ? 'flip' : ''}`} onClick={() => props.handleClick(props.itemIndex, props.cardItem)} style={{opacity: props.completeCards.includes(props.itemIndex)?'.3':'1'}}>
             <img
                 className="front-face" 
-                src={require(`./assets/${cards}.svg`)}
-                alt={cards}
+                src={require(`./assets/${props.cardItem}.svg`)}
+                alt={props.cardItem}
             />
             <img
                 className="back-face"
@@ -24,7 +17,8 @@ const Cards = ({cards, setCards}) => {
                 alt="Javascript"
             />
         </div>
+        </div>
     )
-};
+}
 
-export default Cards
+export default CardList;

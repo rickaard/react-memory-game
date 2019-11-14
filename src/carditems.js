@@ -1,41 +1,34 @@
-// export const carditems = [
-//     'angular',
-//     'aurelia',
-//     'backbone',
-//     'ember',
-//     'react',
-//     'vue'
-// ];
-
-export const carditems = [
+export const Carditems = [
     {
-        type: 'angular',
-        flipped: false,
-        completed: false,
+      id: 1,
+      name: 'angular',
+      flipped: false
     },
     {
-        type: 'aurelia',
-        flipped: false,
-        completed: false
+      id: 2,
+      name: 'aurelia',
+      flipped: false
     },
     {
-        type: 'backbone',
-        flipped: false,
-        completed: false
+      id: 3,
+      name: 'backbone',
+      flipped: false
     },
     {
-        type: 'ember',
-        flipped: false,
-        completed: false
+      id: 4,
+      name: 'ember',
+      flipped: false
     },
     {
-        type: 'react',
-        flipped: false,
-        completed: false
+      id: 5,
+      name: 'react',
+      flipped: false
     },
     {
-        type: 'vue',
-        flipped: false,
-        completed: false
+      id: 6,
+      name: 'vue',
+      flipped: false
     }
-]
+  ]
+
+export default Carditems;
